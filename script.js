@@ -6,7 +6,7 @@ var rn;
 tl.from("section", {
   y: 1000,
   opacity: 0,
-  scale: 1.5,
+  scale: 2.2,
   duration: 0.6,
 });
 
@@ -34,8 +34,8 @@ function showBubble() {
     opacity: 0,
     scale: 0.5,
     stagger:0.00000000009,
-    x:100,
-    y: 100,  
+    x:10,
+    y: 10,  
     duration: 0.8,
   });
 }
@@ -57,9 +57,11 @@ function timerVal() {
     if (count >= 0) {
       timerVal.textContent = count;
       count--;
-    } else {
+    } 
+    else {
       clearInterval(interval);
-      botom.textContent = "Game Over";
+
+      botom.innerHTML = "GAME OVER";
     }
   }, 1000);
 }
