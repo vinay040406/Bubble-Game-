@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            padding: 50px;
+
+        }
+
+        section {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(215, 251, 163);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        section #top {
+            background-color: rgba(155, 236, 159, 1);
+            padding: 0 30%;
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        section .hit,
+        .timer,
+        .score {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 23px;
+        }
+
+        .hit .box,
+        .score .box,
+        .timer .box {
+            border-radius: 5px;
+            padding: 8px 15px;
+            color: rgba(177, 254, 69, 1);
+            background-color: white;
+            font-size: 30px;
+        }
+
+        section #bottom {
+            max-width: 100%;
+            height: calc(100% - 100px);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 50px;
+        }
+
+
+        .bubble {
+            height: 50px;
+            width: 50px;
+            background: white;
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            font-size: 30px;
+        }
+
+        .bubble:hover {
+            background-color: rgb(137, 244, 137);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div id="top">
+            <div class="hit hitgsap">
+                <h3>Hit </h3>
+                <div id="hitVal" class="box"></div>
+
+            </div>
+            <div class="timer hitgsap">
+                <h3>Timer</h3>
+                <div id="timerVal" class="box"></div>
+            </div>
+
+            <div class="score hitgsap">
+                <h3>Score</h3>
+                <div class="box" id="scoreVal">0</div>
+            </div>
+
+
+        </div>
+        <div id="bottom">
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
